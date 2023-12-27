@@ -13,6 +13,10 @@
 		10DA78A22B3C867900FE7E6D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 10DA78A02B3C867900FE7E6D /* Main.storyboard */; };
 		10DA78A42B3C867A00FE7E6D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 10DA78A32B3C867A00FE7E6D /* Assets.xcassets */; };
 		10DA78A72B3C867A00FE7E6D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 10DA78A52B3C867A00FE7E6D /* LaunchScreen.storyboard */; };
+		10DA78B12B3C86C700FE7E6D /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10DA78B02B3C86C700FE7E6D /* Album.swift */; };
+		10DA78B32B3C86CD00FE7E6D /* Track.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10DA78B22B3C86CD00FE7E6D /* Track.swift */; };
+		10DA78B62B3C8AEA00FE7E6D /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10DA78B52B3C8AEA00FE7E6D /* ViewModel.swift */; };
+		10DA78B92B3C8D5E00FE7E6D /* AlbumService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10DA78B82B3C8D5E00FE7E6D /* AlbumService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,10 @@
 		10DA78A32B3C867A00FE7E6D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		10DA78A62B3C867A00FE7E6D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		10DA78A82B3C867A00FE7E6D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		10DA78B02B3C86C700FE7E6D /* Album.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Album.swift; sourceTree = "<group>"; };
+		10DA78B22B3C86CD00FE7E6D /* Track.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Track.swift; sourceTree = "<group>"; };
+		10DA78B52B3C8AEA00FE7E6D /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		10DA78B82B3C8D5E00FE7E6D /* AlbumService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +64,51 @@
 		10DA78992B3C867900FE7E6D /* SwiftMusic */ = {
 			isa = PBXGroup;
 			children = (
-				10DA789A2B3C867900FE7E6D /* AppDelegate.swift */,
+				10DA78B72B3C8D5300FE7E6D /* Service */,
+				10DA78AF2B3C86BC00FE7E6D /* Model */,
+				10DA78AE2B3C868C00FE7E6D /* Supporting Files */,
+				10DA78B42B3C8AD400FE7E6D /* View */,
+			);
+			path = SwiftMusic;
+			sourceTree = "<group>";
+		};
+		10DA78AE2B3C868C00FE7E6D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
 				10DA789C2B3C867900FE7E6D /* SceneDelegate.swift */,
-				10DA789E2B3C867900FE7E6D /* ViewController.swift */,
+				10DA789A2B3C867900FE7E6D /* AppDelegate.swift */,
 				10DA78A02B3C867900FE7E6D /* Main.storyboard */,
 				10DA78A32B3C867A00FE7E6D /* Assets.xcassets */,
 				10DA78A52B3C867A00FE7E6D /* LaunchScreen.storyboard */,
 				10DA78A82B3C867A00FE7E6D /* Info.plist */,
 			);
-			path = SwiftMusic;
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		10DA78AF2B3C86BC00FE7E6D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				10DA78B02B3C86C700FE7E6D /* Album.swift */,
+				10DA78B22B3C86CD00FE7E6D /* Track.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		10DA78B42B3C8AD400FE7E6D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				10DA789E2B3C867900FE7E6D /* ViewController.swift */,
+				10DA78B52B3C8AEA00FE7E6D /* ViewModel.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		10DA78B72B3C8D5300FE7E6D /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				10DA78B82B3C8D5E00FE7E6D /* AlbumService.swift */,
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,8 +183,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				10DA789F2B3C867900FE7E6D /* ViewController.swift in Sources */,
+				10DA78B32B3C86CD00FE7E6D /* Track.swift in Sources */,
 				10DA789B2B3C867900FE7E6D /* AppDelegate.swift in Sources */,
+				10DA78B92B3C8D5E00FE7E6D /* AlbumService.swift in Sources */,
 				10DA789D2B3C867900FE7E6D /* SceneDelegate.swift in Sources */,
+				10DA78B62B3C8AEA00FE7E6D /* ViewModel.swift in Sources */,
+				10DA78B12B3C86C700FE7E6D /* Album.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -289,7 +337,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = KTV28US9SX;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = SwiftMusic/Info.plist;
+				INFOPLIST_FILE = "SwiftMusic/Supporting Files/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -317,7 +365,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = KTV28US9SX;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = SwiftMusic/Info.plist;
+				INFOPLIST_FILE = "SwiftMusic/Supporting Files/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
